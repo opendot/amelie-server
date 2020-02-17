@@ -1,6 +1,18 @@
-# Airett Rails Server
+# Amelie
+ Amelie Suite is a set of software co-designed for people suffering from Rett's syndrome characterized by an innovative way of interaction between care-giver and care-receiver, both equipped with an instrument on their own device, and through the use of an eyetracker (which allows you to track the look of the subject and to determine which point on the screen is watching).
 
-Ruby on Rails 5 API-server of the Airett system.
+
+Amelie is an open source software and accessible to everyone, co-designed by designers, developers, university researchers, families and therapists. Amelie promotes communication and cognitive enhancement for learning and improving interaction and understanding skills.
+The system integrates different technologies (mobile applications, cloud services and adaptive algorithms) to provide an innovative, comprehensive and easy-to-use service. 
+
+
+The software was born from an idea of Associazione Italiana Rett - AIRETT Onlus and Opendot S.r.l., and was designed and developed by Opendot S.r.l., with the essential contribution of Associazione Italiana Rett - AIRETT Onlus.
+
+This repository hosts the server component of the system, providing all the core functionalities.
+
+# Amelie Rails Server
+
+Ruby on Rails 5 API-server of the Amelie system.
 It's the core of the system, it:
 - stores the contents and the sessions created
 - allows the [mobile app](https://github.com/opendot/amelie-mobile), the [desktop webapp](https://github.com/opendot/amelie-communicator) and the eyetracker to communicate
@@ -18,7 +30,7 @@ The project is configured as a micro-services multi-container architecture, wher
 You must have Docker installed in your computer, [download](https://www.docker.com/get-started) and [install](https://docs.docker.com/docker-for-windows/install/) it.
 
 Next you have to choose the environment you want to use. The available environments are:
-- staging_local: if you want to use Airett on your computer
+- staging_local: if you want to use Amelie on your computer
 - multiple: used for development
 
 First you have to build all the docker images, this requires an internet connection.
@@ -58,7 +70,7 @@ If you are using only the _remote_ environment you're ready to go.
 
 If you are using the _local_ environment, you have to start the node server that connects to the eyetracker.
 
-Now the server is ready, to start using Airett you have to activate the eyetracker and start the [desktop webapp](https://github.com/dot-dot-dot/airett-communicator) in your browser at full screen.
+Now the server is ready, to start using Amelie you have to activate the eyetracker and start the [desktop webapp](https://github.com/opendot/amelie-communicator) in your browser at full screen.
 
 Now you can use the [mobile app](https://github.com/opendot/amelie-mobile) to create contents and start sessions. The phone **must be in the same network of the computer** running the local server and the desktop webapp.
 
@@ -71,7 +83,7 @@ The _remote_ server is an online server used to connect many _local_ server, so 
 
 The _local_ server requires a network to communicate with the mobile app, but most of the times it doesn't require an internet connection. The desktop webapp and the eyetracker are supposed to be in the same computer of the _local_ server, but they communicate through a network.
 
-The local server is _offline first_, it does most of it's work without requiring an internet connection. This allows to work with the Airett system by using the mobile tethering of your phone.
+The local server is _offline first_, it does most of it's work without requiring an internet connection. This allows to work with the Amelie system by using the mobile tethering of your phone.
 
 The internet connection is required:
 - when a user first login: users and patients are created in the _remote_ server, they must be retrieved
@@ -93,7 +105,7 @@ This project uses
 ### Local and Remote environments
 This server can work as a local or remote server:
 - local: the server installed in the personal computer of the user
-- remote: the online server that centralize the Airett system
+- remote: the online server that centralize the Amelie system
 
 For every environment of _development_, _staging_ and _production_ we have a __local_ and a __remote_ version. Each version has a different role and provide different routes.
 
@@ -112,11 +124,11 @@ This is not an environment, but we have a `docker-compose.multiple.yml`. By usin
 
 ### Docker Compose
 We use [docker compose](https://docs.docker.com/compose/) as multi container orchestration. The containers we use are:
-- **api**: the container that runs the rails api server, which contains the logic of the Airett system. By setting the environment, it can run as a _local_ or _remote_ server
+- **api**: the container that runs the rails api server, which contains the logic of the Amelie system. By setting the environment, it can run as a _local_ or _remote_ server
 - **db**: the container that holds the mySQL database for development and staging environments
 - **sidekiq**: the container that runs [sidekiq](http://sidekiq.org/), it's where the background jobs are executed. It's spawned from the same image of the rails container so it possess a _local_ or _remote_ environment: it doesn't change its behaviour, but it should be the same environment of the _api_ container
 - **redis**: the container that runs redis, the queue manager
-- **udp_responder**: an udp server in python, it allows the mobile app to check if there is an Airett server in the network it's connected to. Used only for _local_ server.
+- **udp_responder**: an udp server in python, it allows the mobile app to check if there is an Amelie server in the network it's connected to. Used only for _local_ server.
 
 ### Ports
 The server is formed by many micro-services and uses many ports to communicate:
