@@ -107,7 +107,7 @@ gem 'carrierwave-base64'
 gem 'carrierwave_direct', '~> 2.0.0'
 
 # To edit images
-gem 'mini_magick', '~> 4.8.0'
+gem 'mini_magick', '~> 4.9.4'
 
 # To use soft-delete
 gem "paranoia", "~> 2.3.1"
