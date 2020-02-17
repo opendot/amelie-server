@@ -53,3 +53,4 @@ stop_docker.bat
 /rails/private/*
 
 .idea/
+/nginx/staging_dot/
