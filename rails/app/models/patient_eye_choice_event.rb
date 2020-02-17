@@ -1,0 +1,2 @@
+class PatientEyeChoiceEvent < PatientChoiceEvent
+end

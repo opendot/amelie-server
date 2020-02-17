@@ -1,0 +1,60 @@
+version: '3.4'
+services:
+
+  redis:
+    command: redis-server
+    image: redis:alpine  
+
+  db:
+    image: 'mysql:5.7'
+    environment:
+      MYSQL_ROOT_PASSWORD: "VKikCMMgm2qg"
+      MYSQL_DATABASE: staging
+    volumes: 
+      - db-datavolume:/var/lib/mysql
+
+  api:
+    build:
+      context: ./
+      target: api_local
+    image: airett-server-local
+    command: bash -c "rm -f tmp/pids/server.pid && ruby bin/rails s -p 3001 -b '0.0.0.0' -e staging_local"
+    volumes:
+      - ./rails:/home/app/webapp
+    ports:
+      - "3001:3001"
+    environment:
+      - TEST_ROUTES=local
+      - PROCESS_PERSONAL_FILES=true
+    depends_on:
+      - db
+
+  sidekiq:
+    build:
+      context: ./
+      target: api_local
+    image: airett-server-local
+    volumes:
+      - ./rails:/home/app/webapp
+    depends_on:
+      - db
+      - redis
+      - api
+    command: bundle exec sidekiq -e staging_local
+
+  udp_responder:
+    build:
+      context: ./udp_responder
+      dockerfile: udp_responder.dockerfile
+    environment:
+      - UDP_PORT=4001
+    ports:
+      - "0.0.0.0:4001:4001"
+      - "0.0.0.0:4001:4001/udp"
+    depends_on:
+      - api
+      - sidekiq
+    restart: unless-stopped
+
+volumes:
+  db-datavolume:

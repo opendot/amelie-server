@@ -1,0 +1,2 @@
+class MutablePage < Page
+end

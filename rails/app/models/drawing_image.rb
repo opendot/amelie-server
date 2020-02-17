@@ -1,0 +1,2 @@
+class DrawingImage < Pictogram
+end

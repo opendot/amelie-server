@@ -1,0 +1,2 @@
+class PresetPage < ImmutablePage
+end

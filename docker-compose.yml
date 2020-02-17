@@ -1,0 +1,46 @@
+version: '3.4'
+services:
+
+  redis:
+    command: redis-server
+    image: redis:alpine  
+
+  db:
+    image: 'mysql:5.7'
+    environment:
+      MYSQL_ROOT_PASSWORD: "VKikCMMgm2qg"
+      MYSQL_DATABASE: development
+    volumes: 
+      - db-datavolume:/var/lib/mysql
+
+  api:
+    build:
+      context: ./
+      target: api_local
+    image: airett-server-local
+    command: bash -c "rm -f tmp/pids/server.pid && bin/rails s -p 3001 -b '0.0.0.0' -e development_local"
+    volumes:
+      - ./rails:/home/app/webapp
+    ports:
+      - "3001:3001"
+    environment:
+      - TEST_ROUTES=local
+      - PROCESS_PERSONAL_FILES=true
+    depends_on:
+      - db
+
+  sidekiq:
+    build:
+      context: ./
+      target: api_local
+    image: airett-server-local
+    volumes:
+      - ./rails:/home/app/webapp
+    depends_on:
+      - db
+      - redis
+      - api
+    command: bundle exec sidekiq -e development_local
+
+volumes:
+  db-datavolume:

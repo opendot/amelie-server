@@ -1,0 +1,19 @@
+---
+# ActiveRecord has a connection pool which needs 
+# to be properly configured in config/database.yml to work 
+# well with heavy concurrency. Set the pool setting to 
+# something close or equal to the number of threads:
+:concurrency: 2
+staging_remote:
+  :concurrency: 5
+staging_local:
+  :concurrency: 5  
+production:
+  :concurrency: 10
+# A queue with a weight of 2 will be checked twice as often 
+# as a queue with a weight of 1. You can get random queue
+# priorities by declaring each queue with a weight of 1, 
+# so each queue has an equal chance of being processed:
+:queues:
+  - [default, 1]
+  - [mailers, 1]

@@ -1,0 +1,2 @@
+class ArchivedTree < Tree
+end

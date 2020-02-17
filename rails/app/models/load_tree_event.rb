@@ -1,0 +1,2 @@
+class LoadTreeEvent < OperatorEvent
+end

@@ -1,0 +1,2 @@
+class VisualAlertEvent < OperatorEvent
+end

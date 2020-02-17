@@ -1,0 +1,2 @@
+class TobiiCalibrationParameter < TrackerCalibrationParameter
+end

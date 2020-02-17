@@ -1,0 +1,2 @@
+class MutableCard < Card
+end

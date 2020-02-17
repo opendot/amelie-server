@@ -1,0 +1,131 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: "Hello world"
+  error: "Error"
+  contact_help: "Please, contact help service"
+  should_never: "This should never happen"
+  unexpected_error: "Unexpected error"
+  error_create: "Error on creation"
+  error_edit: "Error on edit"
+  error_saving: "Error on saving"
+  error_guest_unauthorized: "Access denied to Guest User"
+  error_user_unauthorized: "Access denied to %{user_type} User"
+  try_again: "Please, try again"
+  error_invalid_parameters: "Invalid parameters"
+  error_card_level: "Invalid level. Use 1, 2, 3, 4 or 5."
+  error_card_type: "Invalid type of card."
+  error_card_already_exists: "The given id is already used."
+  error_content_type: "Invalid type of content."
+  error_page_type: "Invalid type of page."
+  error_session_type: "Invalid type of session."
+  error_tag_type: "Invalid type of tag."
+  error_calibration_parameter_type: "Invalid type of calibration parameter."
+  error_training_session_type: "Invalid type of session."
+  error_user_type: "Invalid type of user."
+  error_tag_not_found: "Error with tag processing"
+  error_card_not_found: "Card not found"
+  error_event_type: "Invalid type of event."
+  error_missing_tree: "Structure must be defined"
+  error_missing_id: "Id must be defined"
+  error_missing_patient_id: "Patient_id must be defined"
+  error_invalid_patient_id: "Patient_id not valid"
+  error_updating_patient: "Unable to update patient"
+  error_invalid_page_id: "Page_id not valid"
+  error_tree_already_exists: "Id of the Tree object already used"
+  error_page_already_exists: "Id of the Page object already used"
+  error_image_not_found: "File doesn't exist"
+  error_cant_delete_tree: "Only CustomTrees can be deleted"
+  error_cant_delete_card: "Only CustomCards can be deleted"
+  error_cant_create_tree: "Unable to save Tree object"
+  error_too_many_favourite_trees: "Max number of favourite trees already reached"
+  error_event_parameters: "Parametri di creazione evento non validi"
+  error_user_login: "User not found in local database"
+  error_user_login_params: "Incorrect login params"
+  error_card_id_needed: "Missing card_id param"
+  error_video_not_found: "Requested video not found"
+  error_video_thumbnail_not_found: "Requested video thumbnail not found"
+  error_image_file_not_found: "Requested image not found"
+  error_image_thumbnail_not_found: "Requested image thumbnail not found"
+  error_card_selection_action: "Invalid type of action"
+  error_audio_file_not_found: "Requested sound not found"
+
+  # Cognitive Session
+  error_load_tree_missing_exercise_tree: "The tree param must contain a valid id"
+  error_one_exercise_a_day: "An can only be executed once a day"
+  error_edit_presentation_page_id: "Don't update the PresentationPage with presentation_page_id, send the whole page object"
+
+  errors:
+
+    packages:
+      download_recources: "Some files were not downloaded"
+
+    patients:
+      not_found: "Patient %{patient_id} not found"
+      not_found_for_user: "Patient %{patient_id} not found for user %{user_email}"
+      disabled: "Patient %{name} %{surname} is not allowed to complete this operation, contact administrator"
+
+    synch:
+      remote_unreachable: "Can't reach remote server, check internet connection"
+
+    trees:
+      missing_root_page: "Missing root page, there isn't a page with level 0"
+      
+    users:
+      signup_local: "Registration is allowed only on remote server"
+      guest_only_one_patient: "Guest user can only have one patient"
+
+  mailers:
+    users:
+      created_user:
+        subject: "Amelie - successful ubscription"
+        body: "Hello %{user_name},\nla you are now subscribed to the Amelie platform. Use your credential to access the app and the personal area on the Amelie website.\n\n Amelie Team"
+    package:
+      create:
+        subject: "Airett Package - Download Link"
+        link_presentation: "Hello %{user_name},\nwith this link you can download the zip file with the sessions"
+        link_expiration: "The link will be available for %{days} days"
+
+      generic_error:
+        subject: "Airett Package - Error"
+        error_during_processing: "An error occured during processing"
+
+      carrierwave_upload_error:
+        subject: "Airett Package - Impossible to upload file"
+        unable_to_upload: "It wasn't possible to upload the zip file"
+  
+  user:
+    generic: "User"
+    guest: "Guest"
+
+  patient:
+    generic: "Patient"

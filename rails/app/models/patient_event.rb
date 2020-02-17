@@ -1,0 +1,2 @@
+class PatientEvent < SessionEvent
+end

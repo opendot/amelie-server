@@ -1,0 +1,2 @@
+class CalibrationSession < TrainingSession
+end

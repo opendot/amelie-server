@@ -1,0 +1,2 @@
+class ImmutableCard < Card
+end

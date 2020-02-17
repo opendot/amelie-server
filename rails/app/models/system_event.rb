@@ -1,0 +1,2 @@
+class SystemEvent < SessionEvent
+end

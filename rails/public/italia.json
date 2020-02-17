@@ -1,0 +1,562 @@
+[
+	{
+		"nome": "Abruzzo",
+		"id": "abruzzo",
+		"children": [
+			{
+				"nome": "Chieti",
+				"id": "CH"
+			},
+			{
+				"nome": "L'Aquila",
+				"id": "AQ"
+			},
+			{
+				"nome": "Pescara",
+				"id": "PE"
+			},
+			{
+				"nome": "Teramo",
+				"id": "TE"
+			}
+		]
+	},
+	{
+		"nome": "Basilicata",
+		"id": "basilicata",
+		"children": [
+			{
+				"nome": "Matera",
+				"id": "MT"
+			},
+			{
+				"nome": "Potenza",
+				"id": "PZ"
+			}
+		]
+	},
+	{
+		"nome": "Calabria",
+		"id": "calabria",
+		"children": [
+			{
+				"nome": "Catanzaro",
+				"id": "CZ"
+			},
+			{
+				"nome": "Cosenza",
+				"id": "CS"
+			},
+			{
+				"nome": "Crotone",
+				"id": "KR"
+			},
+			{
+				"nome": "Reggio Calabria",
+				"id": "RC"
+			},
+			{
+				"nome": "Vibo Valentia",
+				"id": "VV"
+			}
+		]
+	},
+	{
+		"nome": "Campania",
+		"id": "campania",
+		"children": [
+			{
+				"nome": "Avellino",
+				"id": "AV"
+			},
+			{
+				"nome": "Benevento",
+				"id": "BN"
+			},
+			{
+				"nome": "Caserta",
+				"id": "CE"
+			},
+			{
+				"nome": "Napoli",
+				"id": "NA"
+			},
+			{
+				"nome": "Salerno",
+				"id": "SA"
+			}
+		]
+	},
+	{
+		"nome": "Emilia-Romagna",
+		"id": "emilia-romagna",
+		"children": [
+			{
+				"nome": "Bologna",
+				"id": "BO"
+			},
+			{
+				"nome": "Ferrara",
+				"id": "FE"
+			},
+			{
+				"nome": "Forlì-Cesena",
+				"id": "FC"
+			},
+			{
+				"nome": "Modena",
+				"id": "MO"
+			},
+			{
+				"nome": "Parma",
+				"id": "PR"
+			},
+			{
+				"nome": "Piacenza",
+				"id": "PC"
+			},
+			{
+				"nome": "Ravenna",
+				"id": "RA"
+			},
+			{
+				"nome": "Reggio Emilia",
+				"id": "RE"
+			},
+			{
+				"nome": "Rimini",
+				"id": "RN"
+			}
+		]
+	},
+	{
+		"nome": "Friuli-Venezia Giulia",
+		"id": "friuli-venezia giulia",
+		"children": [
+			{
+				"nome": "Gorizia",
+				"id": "GO"
+			},
+			{
+				"nome": "Pordenone",
+				"id": "PN"
+			},
+			{
+				"nome": "Trieste",
+				"id": "TS"
+			},
+			{
+				"nome": "Udine",
+				"id": "UD"
+			}
+		]
+	},
+	{
+		"nome": "Lazio",
+		"id": "lazio",
+		"children": [
+			{
+				"nome": "Frosinone",
+				"id": "FR"
+			},
+			{
+				"nome": "Latina",
+				"id": "LT"
+			},
+			{
+				"nome": "Rieti",
+				"id": "RI"
+			},
+			{
+				"nome": "Roma",
+				"id": "RM"
+			},
+			{
+				"nome": "Viterbo",
+				"id": "VT"
+			}
+		]
+	},
+	{
+		"nome": "Liguria",
+		"id": "liguria",
+		"children": [
+			{
+				"nome": "Genova",
+				"id": "GE"
+			},
+			{
+				"nome": "Imperia",
+				"id": "IM"
+			},
+			{
+				"nome": "La Spezia",
+				"id": "SP"
+			},
+			{
+				"nome": "Savona",
+				"id": "SV"
+			}
+		]
+	},
+	{
+		"nome": "Lombardia",
+		"id": "lombardia",
+		"children": [
+			{
+				"nome": "Bergamo",
+				"id": "BG"
+			},
+			{
+				"nome": "Brescia",
+				"id": "BS"
+			},
+			{
+				"nome": "Como",
+				"id": "CO"
+			},
+			{
+				"nome": "Cremona",
+				"id": "CR"
+			},
+			{
+				"nome": "Lecco",
+				"id": "LC"
+			},
+			{
+				"nome": "Lodi",
+				"id": "LO"
+			},
+			{
+				"nome": "Mantova",
+				"id": "MN"
+			},
+			{
+				"nome": "Milano",
+				"id": "MI"
+			},
+			{
+				"nome": "Monza e Brianza",
+				"id": "MB"
+			},
+			{
+				"nome": "Pavia",
+				"id": "PV"
+			},
+			{
+				"nome": "Sondrio",
+				"id": "SO"
+			},
+			{
+				"nome": "Varese",
+				"id": "VA"
+			}
+		]
+	},
+	{
+		"nome": "Marche",
+		"id": "marche",
+		"children": [
+			{
+				"nome": "Ancona",
+				"id": "AN"
+			},
+			{
+				"nome": "Ascoli Piceno",
+				"id": "AP"
+			},
+			{
+				"nome": "Fermo",
+				"id": "FM"
+			},
+			{
+				"nome": "Macerata",
+				"id": "MC"
+			},
+			{
+				"nome": "Pesaro e Urbino",
+				"id": "PU"
+			}
+		]
+	},
+	{
+		"nome": "Molise",
+		"id": "molise",
+		"children": [
+			{
+				"nome": "Campobasso",
+				"id": "CB"
+			},
+			{
+				"nome": "Isernia",
+				"id": "IS"
+			}
+		]
+	},
+	{
+		"nome": "Piemonte",
+		"id": "piemonte",
+		"children": [
+			{
+				"nome": "Alessandria",
+				"id": "AL"
+			},
+			{
+				"nome": "Asti",
+				"id": "AT"
+			},
+			{
+				"nome": "Biella",
+				"id": "BI"
+			},
+			{
+				"nome": "Cuneo",
+				"id": "CN"
+			},
+			{
+				"nome": "Novara",
+				"id": "NO"
+			},
+			{
+				"nome": "Torino",
+				"id": "TO"
+			},
+			{
+				"nome": "Verbano Cusio Ossola",
+				"id": "VB"
+			},
+			{
+				"nome": "Vercelli",
+				"id": "VC"
+			}
+		]
+	},
+	{
+		"nome": "Puglia",
+		"id": "puglia",
+		"children": [
+			{
+				"nome": "Bari",
+				"id": "BA"
+			},
+			{
+				"nome": "Barletta-Andria-Trani",
+				"id": "BT"
+			},
+			{
+				"nome": "Brindisi",
+				"id": "BR"
+			},
+			{
+				"nome": "Lecce",
+				"id": "LE"
+			},
+			{
+				"nome": "Foggia",
+				"id": "FG"
+			},
+			{
+				"nome": "Taranto",
+				"id": "TA"
+			}
+		]
+	},
+	{
+		"nome": "Sardegna",
+		"id": "sardegna",
+		"children": [
+			{
+				"nome": "Cagliari",
+				"id": "CA"
+			},
+			{
+				"nome": "Carbonia-Iglesias",
+				"id": "CI"
+			},
+			{
+				"nome": "Medio Campidano",
+				"id": "VS"
+			},
+			{
+				"nome": "Nuoro",
+				"id": "NU"
+			},
+			{
+				"nome": "Ogliastra",
+				"id": "OG"
+			},
+			{
+				"nome": "Olbia-Tempio",
+				"id": "OT"
+			},
+			{
+				"nome": "Oristano",
+				"id": "OR"
+			},
+			{
+				"nome": "Sassari",
+				"id": "SS"
+			}
+		]
+	},
+	{
+		"nome": "Sicilia",
+		"id": "sicilia",
+		"children": [
+			{
+				"nome": "Agrigento",
+				"id": "AG"
+			},
+			{
+				"nome": "Caltanissetta",
+				"id": "CL"
+			},
+			{
+				"nome": "Catania",
+				"id": "CT"
+			},
+			{
+				"nome": "Enna",
+				"id": "EN"
+			},
+			{
+				"nome": "Messina",
+				"id": "ME"
+			},
+			{
+				"nome": "Palermo",
+				"id": "PA"
+			},
+			{
+				"nome": "Ragusa",
+				"id": "RG"
+			},
+			{
+				"nome": "Siracusa",
+				"id": "SR"
+			},
+			{
+				"nome": "Trapani",
+				"id": "TP"
+			}
+		]
+	},
+	{
+		"nome": "Toscana",
+		"id": "toscana",
+		"children": [
+			{
+				"nome": "Arezzo",
+				"id": "AR"
+			},
+			{
+				"nome": "Firenze",
+				"id": "FI"
+			},
+			{
+				"nome": "Grosseto",
+				"id": "GR"
+			},
+			{
+				"nome": "Livorno",
+				"id": "LI"
+			},
+			{
+				"nome": "Lucca",
+				"id": "LU"
+			},
+			{
+				"nome": "Massa e Carrara",
+				"id": "MS"
+			},
+			{
+				"nome": "Pisa",
+				"id": "PI"
+			},
+			{
+				"nome": "Pistoia",
+				"id": "PT"
+			},
+			{
+				"nome": "Prato",
+				"id": "PO"
+			},
+			{
+				"nome": "Siena",
+				"id": "SI"
+			}
+		]
+	},
+	{
+		"nome": "Trentino-Alto Adige",
+		"id": "trentino-alto adige",
+		"children": [
+			{
+				"nome": "Bolzano",
+				"id": "BZ"
+			},
+			{
+				"nome": "Trento",
+				"id": "TN"
+			}
+		]
+	},
+	{
+		"nome": "Umbria",
+		"id": "umbria",
+		"children": [
+			{
+				"nome": "Perugia",
+				"id": "PG"
+			},
+			{
+				"nome": "Terni",
+				"id": "TR"
+			}
+		]
+	},
+	{
+		"nome": "Valle d'Aosta",
+		"id": "valle d'aosta",
+		"children": [
+			{
+				"nome": "Aosta",
+				"id": "AO"
+			}
+		]
+	},
+	{
+		"nome": "Veneto",
+		"id": "veneto",
+		"children": [
+			{
+				"nome": "Belluno",
+				"id": "BL"
+			},
+			{
+				"nome": "Padova",
+				"id": "PD"
+			},
+			{
+				"nome": "Rovigo",
+				"id": "RO"
+			},
+			{
+				"nome": "Treviso",
+				"id": "TV"
+			},
+			{
+				"nome": "Venezia",
+				"id": "VE"
+			},
+			{
+				"nome": "Verona",
+				"id": "VR"
+			},
+			{
+				"nome": "Vicenza",
+				"id": "VI"
+			}
+		]
+	}
+]

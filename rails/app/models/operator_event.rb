@@ -1,0 +1,2 @@
+class OperatorEvent < SessionEvent
+end

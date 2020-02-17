@@ -1,0 +1,5 @@
+<p><%= I18n.t("mailers.package.created_package.link_presentation", user_name: @current_user.name) %></p>
+
+<p><%= link_to "Download", @temporary_url %></p>
+
+<p><%= I18n.t("mailers.package.created_package.link_expiration", days: @expiration_days) %></p>

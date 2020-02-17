@@ -1,0 +1,144 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+it:
+  hello: "Ciao mondo"
+  error: "Errore"
+  contact_help: "Per favore, contatta il servizio clienti"
+  should_never: "Questo non dovrebbe mai succedere"
+  unexpected_error: "Errore inaspettato"
+  error_create: "Errore durante la creazione"
+  error_edit: "Errore durante la modifica"
+  error_saving: "Errore durante il salvataggio"
+  error_guest_unauthorized: "Accesso negato ad utente Guest"
+  error_user_unauthorized: "Accesso negato ad utente %{user_type}"
+  try_again: "Per favore, prova di nuovo"
+  error_invalid_parameters: "Parametri non validi"
+  error_card_level: "non è un livello valido. Utilizzare 1, 2, 3, 4 o 5."
+  error_card_type: "non è un tipo valido di card."
+  error_card_already_exists: "L'id specificato è già in uso."
+  error_content_type: "non è un tipo di contenuto valido."
+  error_page_type: "non è un tipo valido di pagina."
+  error_session_type: "non è un tipo valido di sessione."
+  error_tag_type: "non è un tipo valido di tag."
+  error_calibration_parameter_type: "non è un tipo valido di parametro di calibrazione."
+  error_training_session_type: "non è un tipo valido di sessione."
+  error_user_type: "non è un tipo valido di utente."
+  error_tag_not_found: "Errore nel processamento del tag"
+  error_card_not_found: "Card non trovata"
+  error_event_type: "non è un tipo valido di evento."
+  error_missing_tree: "Structure deve esistere"
+  error_missing_id: "Id deve esistere"
+  error_missing_patient_id: "Patient_id deve esistere"
+  error_invalid_patient_id: "Patient_id non valido"
+  error_updating_patient: "Impossibile aggiornare un paziente"
+  error_invalid_page_id: "Page_id non valido"
+  error_tree_already_exists: "Id dell'oggetto Tree già in uso"
+  error_page_already_exists: "Id dell'oggetto pagina già in uso"
+  error_image_not_found: "Il file richiesto non esiste"
+  error_cant_delete_tree: "Gli unici Tree eliminabili sono i CustomTree"
+  error_cant_delete_card: "Azione ammessa soltanto sulle CustomCard"
+  error_cant_create_tree: "Impossibile salvare l'oggetto Tree"
+  error_too_many_favourite_trees: "Il numero massimo di alberi preferiti è stato superato"
+  error_event_parameters: "Parametri di creazione evento non validi"
+  error_user_login: "Utente non trovato nel database locale"
+  error_user_login_params: "Parametri di login non corretti"
+  error_card_id_needed: "Parametro card_id mancante"
+  error_video_not_found: "Il video richiesto non è stato trovato"
+  error_video_thumbnail_not_found: "L'anteprima del video richiesta non è stata trovata"
+  error_image_file_not_found: "L'immagine richiesta non è stata trovata"
+  error_image_thumbnail_not_found: "L'anteprima dell'immagine richiesta non è stata trovata"
+  error_card_selection_action: "non è un tipo valido di azione"
+  error_audio_file_not_found: "Il suono richiesto non è stato trovato"
+
+  # Cognitive Session
+  error_load_tree_missing_exercise_tree: "Il parametro tree deve contenere un id valido"
+  error_one_exercise_a_day: "Un esercizio può essere eseguito solo una volta al giorno"
+  error_edit_presentation_page_id: "Non aggiornare la PresentationPage con presentation_page_id, invia l'intero oggetto"
+
+  errors:
+    messages:
+      carrierwave_processing_error: Carrierwave errore di processing
+      carrierwave_integrity_error: tupo di file non valido
+      carrierwave_download_error: non può essere scaricato
+      extension_whitelist_error: "Carrierwave: Non puoi caricare un file %{extension}, estensioni permesse: %{allowed_types}"
+      extension_blacklist_error: "Carrierwave: Non puoi caricare un file %{extension}, estensioni proibite: %{prohibited_types}"
+      content_type_whitelist_error: "Carrierwave: Non puoi caricare un file %{content_type}"
+      content_type_blacklist_error: "Carrierwave: Non puoi caricare un file %{content_type}"
+      rmagick_processing_error: "Errore nella manipolazione con rmagick, forse non è un'immagine?"
+      mini_magick_processing_error: "Errore nella manipolazione con MiniMagick, forse non è un'immagine Errore: %{e}"
+      min_size_error: "Il file deve essere maggiore di %{min_size}"
+      max_size_error: "Il file deve essere minore di %{max_size}"
+    
+    packages:
+      download_recources: "Alcuni file non sono stati scaricati"
+      
+    patients:
+      not_found: "Paziente %{patient_id} non trovato"
+      not_found_for_user: "Paziente %{patient_id} non trovato per utente %{user_email}"
+      disabled: "Paziente %{name} %{surname} non è abilitato per questa operazione, contattare l'amministrazione"
+
+    synch:
+      remote_unreachable: "Non riesco a raggiungere il server remoto, controllare la connessione internet"
+
+    trees:
+      missing_root_page: "Root page mancante, non c'è una pagina con livello 0"
+
+    users:
+      signup_local: "La registrazione può essere fatta solo su server remoto"
+      guest_only_one_patient: "L'utente Guest può avere solo un paziente"
+      
+  mailers:
+    users:
+      created_user:
+        subject: "Amelie - iscrizione avvenuta con successo"
+        body: "Ciao %{user_name},\nla tua iscrizione è avvenuta con successo. Usa le credenziali che hai inserito per accedere all'app e all'area personale nel sito web.\n\n Il team Amelie"
+
+    package:
+      created_package:
+        subject: "Airett Package - Download Link"
+        link_presentation: "Ciao %{user_name},\na questo link potrai scaricare il file zip con le sessioni"
+        link_expiration: "Il link sarà disponibile per %{days} giorni"
+
+      generic_error:
+        subject: "Airett Package - Errore"
+        error_during_processing: "E' avvenuto un errore durante l'elaborazione"
+
+      carrierwave_upload_error:
+        subject: "Airett Package - Impossibile caricare il file"
+        unable_to_upload: "Non è stato possibile caricare il file zip"
+  
+  user:
+    generic: "Utente"
+    guest: "Guest"
+
+  patient:
+    generic: "Paziente"

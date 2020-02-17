@@ -1,0 +1,2 @@
+class PresetCard < ImmutableCard
+end

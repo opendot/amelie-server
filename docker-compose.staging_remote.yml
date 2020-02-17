@@ -1,0 +1,41 @@
+version: '3.4'
+services:
+
+  redis:
+    command: redis-server
+    image: redis:alpine  
+    restart: unless-stopped
+
+  api:
+    build:
+      context: ./
+      target: api_remote
+    image: airett-server-remote
+    environment: 
+      DISABLE_DATABASE_ENVIRONMENT_CHECK: 1
+      PASSENGER_APP_ENV: staging_remote
+    volumes:
+      - /etc/letsencrypt/live/staging.amelie.it/privkey.pem:/etc/nginx/ssl/privkey.pem
+      - /etc/letsencrypt/live/staging.amelie.it/fullchain.pem:/etc/nginx/ssl/fullchain.pem
+      - ./nginx/staging_remote/sites-enabled/webapp.conf:/etc/nginx/sites-enabled/webapp.conf
+      - ./nginx/staging_remote/conf.d/nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./rails/config/application.yml:/home/app/webapp/config/application.yml
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - TEST_ROUTES=remote
+    restart: unless-stopped  
+
+  sidekiq:
+    build:
+      context: ./
+      target: api_remote
+    image: airett-server-remote
+    volumes:
+      - ./rails/config/application.yml:/home/app/webapp/config/application.yml
+    depends_on:
+      - redis
+      - api
+    command: bundle exec sidekiq -e staging_remote
+    restart: unless-stopped

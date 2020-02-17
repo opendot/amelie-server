@@ -1,0 +1,2 @@
+class EyetrackerUnlockEvent < OperatorEvent
+end

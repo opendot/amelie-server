@@ -1,0 +1,2 @@
+class ArchivedIdlePage < ImmutablePage
+end

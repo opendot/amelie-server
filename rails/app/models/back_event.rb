@@ -1,0 +1,2 @@
+class BackEvent < OperatorEvent
+end

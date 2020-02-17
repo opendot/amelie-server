@@ -1,0 +1,2 @@
+class GenericImage < Pictogram
+end

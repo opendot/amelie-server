@@ -1,0 +1,2 @@
+class PersonalImage < Pictogram
+end

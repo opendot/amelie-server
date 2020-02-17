@@ -1,0 +1,2 @@
+class PatientTouchChoiceEvent < PatientChoiceEvent
+end

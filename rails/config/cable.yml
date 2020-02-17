@@ -1,0 +1,21 @@
+development: &development
+  adapter: redis
+  url: <%= ENV['ACTION_CABLE_BACKEND_URL'] %>
+development_local:
+  <<: *development
+development_remote:
+  <<: *development
+staging: &staging
+  adapter: redis
+  url: <%= ENV['ACTION_CABLE_BACKEND_URL'] %>
+staging_local:
+  <<: *staging
+staging_remote:
+  <<: *staging
+production: &production
+  adapter: redis
+  url: <%= ENV['ACTION_CABLE_BACKEND_URL'] %>
+test:
+  adapter: test
+  url: <%= ENV['ACTION_CABLE_BACKEND_URL'] %>
+  

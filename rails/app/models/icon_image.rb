@@ -1,0 +1,2 @@
+class IconImage < Pictogram
+end
