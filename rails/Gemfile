@@ -77,7 +77,7 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'sidekiq',  '~>4.0'
 
 # Kaminari handles pagination
-gem 'kaminari', '~> 1.1.1'
+gem 'kaminari', '~> 1.2.1'
 
 # Kaminari modifier for API headers
 gem 'api-pagination'
