@@ -92,7 +92,7 @@ gem 'ffaker', '~> 2.7.0'
 gem 'rubocop', '~> 0.51'
 
 # File Upload 
-gem 'carrierwave', '~> 1.2.1'
+gem 'carrierwave', '~> 1.3.2'
 # Automatic thumbnail for videos
 gem 'carrierwave-video-thumbnailer', '~> 0.1.4'
 
