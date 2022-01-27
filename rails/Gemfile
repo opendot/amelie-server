@@ -74,7 +74,7 @@ gem 'omniauth', '>= 1.7.0'
 gem 'rack-cors', :require => 'rack/cors'
 
 # Required for delayed jobs
-gem 'sidekiq',  '~>4.0'
+gem 'sidekiq',  '~>5.2'
 
 # Kaminari handles pagination
 gem 'kaminari', '~> 1.1.1'
